@@ -34,7 +34,12 @@ body{
 
 .table .thead-dark th{
   color:floralwhite;
-  background-color:#6E3F19
+  background-color:#6E3F19;
 }
-tr:hover {background-color:#dbb08db0!important
+tr:hover {background-color:#dbb08db0!important;
+}
+
+.card-header{
+  color:floralwhite!important;
+  background-color:#6E3F19!important;
 }
