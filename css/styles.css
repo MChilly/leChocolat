@@ -39,7 +39,8 @@ body{
 tr:hover {background-color:#dbb08db0!important;
 }
 
-.card-header{
+.bg-secondary{
   color:floralwhite!important;
   background-color:#6E3F19!important;
 }
+
