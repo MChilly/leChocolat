@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top ">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="./index.html"><img src="images/logo.png" height="40" width="54"></a>
 
@@ -38,10 +38,38 @@
                             Contact</a>
                     </li>
                 </ul>
+                <!-- we can use  ml-auto on the span so the login goes right -->
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#cartModal">
+                        <span><i class="fa fa-shopping-cart"></i> 0</span>
+                    </a>
+                </span>
             </div>
-
         </div>
     </nav>
+
+    <!-- Cart Modal-->
+    <div id="cartModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Cart</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container" id="darkChocol">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-3">
+
+
+                            </div>
+                        </div><!-- End row -->
+                    </div><!-- End container -->
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <header class="jumbotron">
         <div class="container">
@@ -68,14 +96,338 @@
 
         <div class="row">
             <div class="col-12">
-                <h3>Menu</h3>
+                <h2>Pick your flavors</h2>
                 <hr>
             </div>
         </div>
 
-        <div class="row row-content">
-            <div class="col-12 col-sm-6">
-                <h2>Under Heavy Construction</h2>
+
+        <div class="container-menu mb-5">
+            <div class="row w-100">
+                <div class="col-md-3 mb-5">
+                    <div class="card border-warning mx-sm-1 p-3">
+                        <div class="card border-warning shadow text-warning p-3 my-card"><span class="fa fa-heart"
+                                aria-hidden="true"></span>
+                        </div>
+                        <div class="text-warning text-center mt-3">
+                            <img src="./images/dark/darkChoco.jpg" class="img-fluid" alt="Dark Choco Bars">
+                        </div>
+                        <div class="text-warning text-center mt-2">
+                            <h5>Dark Chocolate</h5>
+                            <a role="button" class="btn btn-warning btn-sm" value="pickDark" data-toggle="modal"
+                                href="#darkModal"> Pick me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <div class="card border-warning mx-sm-1 p-3">
+                        <div class="card border-warning shadow text-warning p-3 my-card"><span class="fa fa-heart"
+                                aria-hidden="true"></span></div>
+                        <div class="text-warning text-center mt-3">
+                            <img src="./images/milkChoco.jpg" class="img-fluid" alt="Milk Choco Bars">
+                        </div>
+                        <div class="text-warning text-center mt-2">
+                            <h5>Milk Chocolate</h5>
+                            <a role="button" class="btn btn-warning btn-sm" value="pickMilk" data-toggle="modal"
+                                href="#milkModal"> Pick me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <div class="card border-warning mx-sm-1 p-3">
+                        <div class="card border-warning shadow text-warning p-3 my-card"><span class="fa fa-heart"
+                                aria-hidden="true"></span></div>
+                        <div class="text-warning text-center mt-3">
+                            <img src="./images/whiteChoco.jpg" class="img-fluid" alt="White Choco Bars">
+                        </div>
+                        <div class="text-warning text-center mt-2">
+                            <h5>White Chocolate</h5>
+                            <button class="btn btn-warning btn-sm" value="pickWhite" data-toggle="modal"
+                                href="#whiteModal"> Pick me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <div class="card border-warning mx-sm-1 p-3">
+                        <div class="card border-warning shadow text-warning p-3 my-card"><span class="fa fa-heart"
+                                aria-hidden="true"></span></div>
+                        <div class="text-warning text-center mt-3">
+                            <img src="./images/moccaChoco.jpg" class="img-fluid" alt="Mocca Choco Bars">
+                        </div>
+                        <div class="text-warning text-center mt-2">
+                            <h5>Mocca Chocolate</h5>
+                            <button class="btn btn-warning btn-sm" value="pickMocca" data-toggle="modal"
+                                href="#moccaModal"> Pick me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dark Choco Modal-->
+    <div id="darkModal" class="modal fade" role="dialog modal-lg">
+        <div class="modal-dialog modal-xl" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Dark Chocolate</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container" id="darkChoco">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/dark/darkCake.jpg" class="img-fluid" alt="Dark Choco Cake">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">Dark Choco Cake</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">25.00€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/dark/darkMuffin.jpg" class="img-fluid" alt="Dark Orange Cake">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">Dark Chocolate Muffins</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.99€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/dark/darkCookies.jpg" class="img-fluid" alt="Dark Choco Cookies">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">Dark Choco Cookies</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">2.99€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/dark/darkChocobrownie.jpg" class="img-fluid"
+                                        alt="Dark Choco Brownie">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">Dark Choco Brownies</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">4.99€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End row -->
+                    </div><!-- End container -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Milk Choco Modal-->
+    <div id="milkModal" class="modal fade" role="dialog modal-lg">
+        <div class="modal-dialog modal-xl" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Milk Chocolate</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container" id="milkChoco">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/milk/milkPraline.jpg" class="img-fluid" alt="Pralines">
+                                    <div class=" card card-body border-default">
+                                        <h6 class="text-center">Pralines</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">2.99€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/milk/milkMousse.jpg" class="img-fluid" alt="Mousse">
+                                    <div class=" card card-body border-default">
+                                        <h6 class="text-center">Mousse</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.25€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/milk/milkCookies.jpg" class="img-fluid" alt="Milk Cookies">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">Milk Cookies</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">2.99€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/milk/milkShake.jpg" class="img-fluid" alt="Milkshake">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">Milkshake</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">4.75€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End row -->
+                    </div><!-- End container -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- White Choco Modal-->
+    <div id="whiteModal" class="modal fade" role="dialog modal-lg">
+        <div class="modal-dialog modal-xl" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">White Chocolate</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container" id="whiteChoco">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/white/whiteCakepops.jpg" class="img-fluid" alt="White Cake Pops">
+                                    <div class=" card card-body border-default">
+                                        <h6 class="text-center">White Cake Pops</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.25€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/white/whitemeringue.jpg" class="img-fluid"
+                                        alt="White Meringue Cake">
+                                    <div class=" card card-body border-default">
+                                        <h6 class="text-center">White Meringue Cake</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.25€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/white/whiteGingerbread.jpg" class="img-fluid"
+                                        alt="White Gingerbread">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">White Gingerbread</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.25€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/white/whiteChocoBar.jpg" class="img-fluid" alt="White Choco Bar">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">White Choco Bar</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.25€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End row -->
+                    </div><!-- End container -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mocca Choco Modal-->
+    <div id="moccaModal" class="modal fade" role="dialog modal-lg">
+        <div class="modal-dialog modal-xl" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Mocca Chocolate</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container" id="moccaChoco">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/mocca/moccaChocoBar.jpg" class="img-fluid" alt="Mocca Choco Bar">
+                                    <div class=" card card-body border-default">
+                                        <h6 class="text-center">Mocca Choco Bar</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.25€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/mocca/moccaCookies.jpg" class="img-fluid" alt="Mocca Cookies">
+                                    <div class=" card card-body border-default">
+                                        <h6 class="text-center">Mocca Cookies</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.25€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/mocca/moccaTiramissu.jpg" class="img-fluid" alt="Tiramissu">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">Tiramissu</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.25€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="thumbnail">
+                                    <img src="./images/mocca/moccaCake.jpg" class="img-fluid" alt="Mocca Cake">
+                                    <div class="card card-body border-default">
+                                        <h6 class="text-center">Mocca Cake</h6>
+                                        <span class="badge badge-secondary badge-pill badge-dark">5.25€</span>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="#" class="btn btn-danger btn-xs" role="button">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End row -->
+                    </div><!-- End container -->
+                </div>
             </div>
         </div>
     </div>

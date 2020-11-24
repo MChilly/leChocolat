@@ -71,3 +71,19 @@ height: 300px;
   bottom: 0px;
   z-index: +1;
 }
+
+
+.container-menu{
+  padding:70px 30px 70px 30px;
+  margin:0px auto;
+  background: #6E3F19;
+  /* color:floralwhite; */
+}
+
+.my-card {
+    position:absolute;
+    left:40%;
+    top:-20px;
+    border-radius:50%;
+}
+
